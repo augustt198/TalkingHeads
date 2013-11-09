@@ -1,0 +1,6 @@
+dbaddress: localhost
+dbport: 27017
+dbname: test
+collectionname: test
+usernamefield: username
+messagefield: message

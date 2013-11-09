@@ -1,0 +1,9 @@
+name: TalkingHeads
+main: im.prox.TalkingHeads.HeadPlugin
+version: 0.1
+author: augustt198
+commands:
+  setMessage:
+    description: Sets your player's message
+  getMessage:
+    description: Gets a player's message
