@@ -26,11 +26,11 @@ final HeadPlugin plugin;
 		}
 		
 		String username = args[0];
-		if(!HeadUtils.playerExists(plugin.getCollection(), username)){
+		if(!HeadUtils.playerExists(plugin, username)){
 			sender.sendMessage(ChatColor.GOLD+username+ChatColor.YELLOW+" says nothing...");
 			return false;
 		}
-		String message = HeadUtils.getMessage(plugin.getCollection(), username);
+		String message = HeadUtils.getMessage(plugin, username);
 		if(message == null || message == ""){
 			sender.sendMessage(ChatColor.GOLD+username+ChatColor.YELLOW+" says nothing...");
 			return false;

@@ -28,7 +28,7 @@ public class SetMessageCommand implements CommandExecutor{
 		}
 		String username = sender.getName();
 		String message = StringUtils.join(args, " ", 0, args.length);
-		HeadUtils.setMessage(plugin.getCollection(), username, message);
+		HeadUtils.setMessage(plugin, username, message);
 		sender.sendMessage(ChatColor.GREEN + "Message set!");
 		return false;
 	}

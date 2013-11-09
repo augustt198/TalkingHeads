@@ -21,17 +21,17 @@ public class HeadListener implements Listener{
 	@EventHandler
 	public void PlayerInteract(PlayerInteractEvent event){
 		Player player = event.getPlayer();
-		BlockState block = event.getClickedBlock().getState();
 		if(event.getAction() == Action.RIGHT_CLICK_BLOCK){
+			BlockState block = event.getClickedBlock().getState();
 			if(block instanceof Skull){
 				Skull skull = (Skull) block;
 				if(skull.getSkullType().equals(SkullType.PLAYER)){
 					String headOwner = skull.getOwner();
-					if(!HeadUtils.playerExists(plugin.getCollection(), headOwner)){
+					if(!HeadUtils.playerExists(plugin, headOwner)){
 						player.sendMessage(ChatColor.GOLD+headOwner+ChatColor.YELLOW+" says nothing...");
 						return;
 					}
-					String message = HeadUtils.getMessage(plugin.getCollection(), headOwner);
+					String message = HeadUtils.getMessage(plugin, headOwner);
 					if(message == null || message == ""){
 						player.sendMessage(ChatColor.GOLD+headOwner+ChatColor.YELLOW+" says nothing...");
 						return;

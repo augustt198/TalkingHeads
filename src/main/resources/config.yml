@@ -4,3 +4,4 @@ dbname: test
 collectionname: test
 usernamefield: username
 messagefield: message
+addplayer: true
